@@ -1,0 +1,27 @@
+nav{
+    background: #0096C7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1% 0;
+    color: #f9f9f9;
+}
+.nav-links{
+    list-style-type: none;
+    display: flex;
+    text-decoration: none;
+}
+li{
+    margin: 5px;
+}
+.nav-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.nav-link{
+    text-decoration: none;
+    color: #f9f9f9;
+}
+.nav-link:hover{
+    color: #deb887;
+}
