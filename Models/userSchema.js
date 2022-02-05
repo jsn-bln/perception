@@ -30,7 +30,18 @@ const userSchema = new Schema({
         trim: true,
         required: true
     },
-    fullname: String,
+    firstname: {
+        type: String,
+        unique: true,
+        trim: true,
+        required: true
+    },
+    lastname: {
+        type: String,
+        unique: true,
+        trim: true,
+        required: true
+    },
     post: [postSchema]
 })
 
