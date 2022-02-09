@@ -16,7 +16,8 @@ router.post('/register', (req,res) => {
             const newUser = new Users({
                 username: req.body.username,
                 password: hash,
-                fullname: req.body.fullname
+                firstname: req.body.firstname,
+                lastname: req.body.lastname
             })
             await newUser.save();
             res.status(201).json({message: 'registered successfully'})
@@ -28,7 +29,7 @@ router.get('/', (req,res) => {
     Users.find({fullname: req.body.fullname}, (err,user) => {
         if(err) return res.status(500).json({message: err.message})
         if(user){
-            return res.status(200).json({ fullname :user.fullname})
+            return res.status(200).json({ message :"fond one"})
         }
         if(!user) return res.status(400).json({message: "user not found"})
     })
